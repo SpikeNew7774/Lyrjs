@@ -2,6 +2,7 @@
 Lyrjs is a free to use API for word and line synced Lyrics
 
 # Endpoinds
+https://lyrjs.spikerko.org/
 - GET /lyrics/search?track={Track Name}&artist={Track Artist}&bulk={true | false}
   - track = The Name of the Track
   - artist = The Name of the Artist
