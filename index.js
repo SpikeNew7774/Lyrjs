@@ -164,7 +164,7 @@ app.get("/lyrics/search", async (req, res) => {
                             /* console.log(prelyrics) */
                             /* console.log('fetched lyrics') */
                             
-                            if (!prelyrics.includes("401 - Unauthorized")) {
+                            if (prelyrics !== "" && !prelyrics.includes("401 - Unauthorized")) {
                                 const lyrics = JSON.parse(prelyrics)
                                 originalLyricsLength.number = lyrics.Type == "Static" ? lyrics.Lines.length : lyrics.Content.length
                                 if (ourToken == true) {
@@ -201,6 +201,7 @@ app.get("/lyrics/search", async (req, res) => {
                                     error: true,
                                     status: 500
                                 }))
+                                console.log(err)
                             } catch (error) {
                                 //console.log(error)
                             }
@@ -386,7 +387,7 @@ app.get("/lyrics/id", async (req, res) => {
                                     /* console.log(prelyrics) */
                                     /* console.log('fetched lyrics') */
                                     
-                                    if (!prelyrics.includes("401 - Unauthorized")) {
+                                    if (prelyrics !== "" && !prelyrics.includes("401 - Unauthorized")) {
                                         const lyrics = JSON.parse(prelyrics)
                                         originalLyricsLength.number = lyrics.Type == "Static" ? lyrics.Lines.length : lyrics.Content.length
                                         if (ourToken == true) {
