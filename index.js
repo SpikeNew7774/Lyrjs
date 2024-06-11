@@ -182,12 +182,12 @@ app.get("/lyrics/search", async (req, res) => {
                                 failedFetches++
                             }
                             if (index + 1 == tracksListLengthBulk) {
-                                if (fullLyricsList.content.length <= 0) {
+                                if (fullLyricsList.Type == "Static" ? fullLyricsList.Lines.length : fullLyricsList.content.length <= 0) {
                                     fullLyricsList.error = true
                                 }
                                 res.status(200).send(JSON.stringify({
-                                    failed_tracks: data.tracks.total - fullLyricsList.content.length,
-                                    total_fetched: fullLyricsList.content.length,
+                                    failed_tracks: data.tracks.total - fullLyricsList.Type == "Static" ? fullLyricsList.Lines.length : fullLyricsList.content.length,
+                                    total_fetched: fullLyricsList.Type == "Static" ? fullLyricsList.Lines.length : fullLyricsList.content.length,
                                     total: data.tracks.total,
                                     ...fullLyricsList
                                 }, null, 2))
@@ -404,14 +404,14 @@ app.get("/lyrics/id", async (req, res) => {
                                         failedFetches += 1
                                     }
                                     if (index + 1 == tracksListLength) {
-                                        if (fullLyricsList.content.length <= 0) {
+                                        if (fullLyricsList.Type == "Static" ? fullLyricsList.Lines.length : fullLyricsList.content.length <= 0) {
                                             fullLyricsList.error = true
                                         }
 
                                         res.status(200).send(JSON.stringify({
-                                            failed_tracks: tracksIds.length - fullLyricsList.content.length,
+                                            failed_tracks: tracksIds.length - fullLyricsList.Type == "Static" ? fullLyricsList.Lines.length : fullLyricsList.content.length,
                                             total: tracksIds.length,
-                                            total_fetched: fullLyricsList.content.length,
+                                            total_fetched: fullLyricsList.Type == "Static" ? fullLyricsList.Lines.length : fullLyricsList.content.length,
                                             ...fullLyricsList
                                         }, null, 2))
                                         failedFetches = 0
