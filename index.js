@@ -108,9 +108,9 @@ app.get("/lyrics/search", async (req, res) => {
                         number: undefined
                     }
 
-                    originalLyricsLength.number = lyrics.Content.length
+                    originalLyricsLength.number = lyrics.Type == "Static" ? lyrics.Lines.length : lyrics.Content.length
                     if (ourToken == true) {
-                        lyrics.Content.length = Math.round(lyrics.Content.length / 3)
+                        lyrics.Type == "Static" ? lyrics.Lines.length = Math.round(lyrics.Lines.length / 3) : lyrics.Content.length = Math.round(lyrics.Content.length / 3)
                     }
                     res.status(200).send(JSON.stringify({
                         error: false,
@@ -166,9 +166,9 @@ app.get("/lyrics/search", async (req, res) => {
                             
                             if (!prelyrics.includes("401 - Unauthorized")) {
                                 const lyrics = JSON.parse(prelyrics)
-                                originalLyricsLength.number = lyrics.Content.length
+                                originalLyricsLength.number = lyrics.Type == "Static" ? lyrics.Lines.length : lyrics.Content.length
                                 if (ourToken == true) {
-                                    lyrics.Content.length = Math.round(lyrics.Content.length / 3)
+                                    lyrics.Type == "Static" ? lyrics.Lines.length = Math.round(lyrics.Lines.length / 3) : lyrics.Content.length = Math.round(lyrics.Content.length / 3)
                                 }
                                 fullLyricsList.content.push({
                                     name: item.name,
@@ -319,9 +319,9 @@ app.get("/lyrics/id", async (req, res) => {
                             number: undefined
                         }
 
-                        originalLyricsLength.number = lyrics.Content.length
+                        originalLyricsLength.number = lyrics.Type == "Static" ? lyrics.Lines.length : lyrics.Content.length
                         if (ourToken == true) {
-                            lyrics.Content.length = Math.round(lyrics.Content.length / 3)
+                            lyrics.Type == "Static" ? lyrics.Lines.length = Math.round(lyrics.Lines.length / 3) : lyrics.Content.length = Math.round(lyrics.Content.length / 3)
                         }
                         res.status(200).send(JSON.stringify({
                             error: false,
@@ -388,9 +388,9 @@ app.get("/lyrics/id", async (req, res) => {
                                     
                                     if (!prelyrics.includes("401 - Unauthorized")) {
                                         const lyrics = JSON.parse(prelyrics)
-                                        originalLyricsLength.number = lyrics.Content.length
+                                        originalLyricsLength.number = lyrics.Type == "Static" ? lyrics.Lines.length : lyrics.Content.length
                                         if (ourToken == true) {
-                                            lyrics.Content.length = Math.round(lyrics.Content.length / 3)
+                                            lyrics.Type == "Static" ? lyrics.Lines.length = Math.round(lyrics.Lines.length / 3) : lyrics.Content.length = Math.round(lyrics.Content.length / 3)
                                         }
                                         fullLyricsList.content.push({
                                             name: item.name,
