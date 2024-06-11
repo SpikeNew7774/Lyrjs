@@ -1,6 +1,6 @@
 {
-  "name": "lyrics-api",
-  "version": "1.0.0",
+  "name": "Lyrjs",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "node --env-file=.env index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Spikerko",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
