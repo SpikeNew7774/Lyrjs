@@ -124,10 +124,10 @@ app.get("/lyrics/search", async (req, res) => {
                     }))
                 })
                 .catch(err => {
-                    res.status(500).send(JSON.stringify({
+                    res.status(404).send(JSON.stringify({
                         error: true,
-                        details: err,
-                        status: 500
+                        details: "Lyrics Not Found",
+                        status: 404
                     }))
                 });
         } else if (req.query.bulk && req.query.bulk == "true") {
@@ -341,10 +341,10 @@ app.get("/lyrics/id", async (req, res) => {
                     }
                 })
                 .catch(err => {
-                    res.status(500).send(JSON.stringify({
+                    res.status(404).send(JSON.stringify({
                         error: true,
-                        details: err,
-                        status: 500
+                        details: "Lyrics Not Found",
+                        status: 404
                     }))
                 });
         } else if (req.query.ids) {
