@@ -1,5 +1,5 @@
 # Lyrjs
-Lyrjs is a Open-Source free to use API for word synced Lyrics\
+Lyrjs is a Open-Source free to use API for word synced Song Lyrics\
 ***Some lyrics may not support word or line synced lyrics or not even have lyrics***
 
 # Endpoinds
