@@ -14,3 +14,5 @@ https://lyrjs.spikerko.org/
 Headers:
 - Content-Type: {application/json | null}
 - Authorization: {Bearer {Your Spotify App Access Token} | null} if null => Without a token you just get a third of the lyrics that you were supposed to get
+
+***This may be against Spotify's TOS. Be aware that any damages this API causes you, we are not responsible for it.
