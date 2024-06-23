@@ -1,5 +1,6 @@
 # Lyrjs
-Lyrjs is a free to use API for word and line synced Lyrics
+Lyrjs is a free to use API for word synced Lyrics
+***Some lyrics may support word or line synced lyrics or not even have lyrics***
 
 # Endpoinds
 https://lyrjs.spikerko.org/
