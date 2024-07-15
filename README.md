@@ -28,8 +28,8 @@ Thanks to:\
   - Example: You (the user) fetch our API for lyrics, We (Lyrjs) get the lyrics by the reqested lyrics from another API for you. That means that the other API doesn't know anything about you but only about us (Lyrjs)
 
 # Terms Of Service
-- You can not use this API outside of "lyrjs.spikerko.org"
-  - Example: You can not use this API to be fetched on the backend and then be shown to the user, Except it contains a header: "Lyrics-Origin" or "X-Lyrics-Origin" that equals to "Lyrjs".
+- You can not use this API outside of "lyrjs.spikerko.org"*
+  - Example: You can not use this API to be fetched on the backend and then be shown to the user, *Except if it contains a header: "Lyrics-Origin" or "X-Lyrics-Origin" that equals to "Lyrjs".
 - Commercial use is not allowed. 
 - We are not responsible for any damages this API causes you.
 
