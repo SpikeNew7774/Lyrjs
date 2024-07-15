@@ -33,4 +33,4 @@ Thanks to:\
 - Commercial use is not allowed. 
 - We are not responsible for any damages this API causes you.
 
-***This may be against Spotify's TOS. Be aware that any damages this API causes you, we are not responsible for them.***\
+***This may be against Spotify's TOS. Be aware that any damages this API causes you, we are not responsible for them.***
