@@ -1,2 +1,2 @@
 # Lyrjs
-Check out the [Wiki](https://github.com/SpikeNew7774/Lyrjs/wiki) for all the information
+Check out the [![GitHub Wiki Link](https://img.shields.io/badge/wiki-documentation-forestgreen)](https://github.com/SpikeNew7774/Lyrjs/wiki) for all the information
