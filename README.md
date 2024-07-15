@@ -16,6 +16,7 @@ Headers:
 - Content-Type: {application/json | null}
 - Authorization: {Bearer {Your Spotify App Access Token} | null} if null => Without a token you just get a third of the lyrics that you were supposed to get
 
-***This may be against Spotify's TOS. Be aware that any damages this API causes you, we are not responsible for it.***
-Thanks to: - Beautiful Lyrics API (by surfbryce and HRTK92)
-              - This is used to as the lyrics DB (normally you (the user) would have to enter tokens and specify fetch options but we (Lyrjs) do it for you)
+***This may be against Spotify's TOS. Be aware that any damages this API causes you, we are not responsible for it.***\
+Thanks to:\
+- Beautiful Lyrics API (by surfbryce and HRTK92)
+  - This is used to as the lyrics DB (normally you (the user) would have to enter tokens and specify fetch options but we (Lyrjs) do it for you)
