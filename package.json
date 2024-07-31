@@ -6,6 +6,7 @@
   "scripts": {
     "devStart": "nodemon --env-file=.env --watch index.js",
     "start": "node --env-file=.env index.js"
+    "gcc": "node index.js"
   },
   "keywords": [],
   "author": "Spikerko",
