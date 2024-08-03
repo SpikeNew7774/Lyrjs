@@ -54,9 +54,6 @@ app.get("/lyrics/search", async (req, res) => {
             res.status(401).send(JSON.stringify({
                 error: true,
                 details: "Invalid Access Token",
-                devdata: {
-                    input: userAccessToken
-                },
                 status: 401
             }, null, 2))
             return "none"
