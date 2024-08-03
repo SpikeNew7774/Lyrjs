@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors")
 const { generateToken } = require("./addons/generateToken.js")
 
-//app.use(cors())
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
