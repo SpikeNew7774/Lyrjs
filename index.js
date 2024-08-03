@@ -102,7 +102,10 @@ app.get("/lyrics/search", async (req, res) => {
                     'User-Agent': 'insomnia/9.2.0',
                     Origin: 'https://xpui.app.spotify.com',
                     Referer: 'https://xpui.app.spotify.com/',
-                    Authorization: `Bearer ${socalitoken ? socalitoken : '1'}`
+                    Authorization: `Bearer ${socalitoken ? socalitoken : '1'}`,
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    'Pragma': 'no-cache',
+                    'Expires': '0'
                 }
             })
                 .then(resp => resp.json())
@@ -155,7 +158,10 @@ app.get("/lyrics/search", async (req, res) => {
                             'User-Agent': 'insomnia/9.2.0',
                             Origin: 'https://xpui.app.spotify.com',
                             Referer: 'https://xpui.app.spotify.com/',
-                            Authorization: `Bearer ${socalitoken ? socalitoken : '1'}`
+                            Authorization: `Bearer ${socalitoken ? socalitoken : '1'}`,
+                            'Cache-Control': 'no-cache, no-store, must-revalidate',
+                            'Pragma': 'no-cache',
+                            'Expires': '0'
                         }
                     })
                         .then(resp => resp.text())
@@ -312,7 +318,10 @@ app.get("/lyrics/id", async (req, res) => {
                     'User-Agent': 'insomnia/9.2.0',
                     Origin: 'https://xpui.app.spotify.com',
                     Referer: 'https://xpui.app.spotify.com/',
-                    Authorization: `Bearer ${socalitoken ? socalitoken : '1'}`
+                    Authorization: `Bearer ${socalitoken ? socalitoken : '1'}`,
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    'Pragma': 'no-cache',
+                    'Expires': '0'
                 }
             })
                 .then(resp => resp.text())
@@ -379,7 +388,10 @@ app.get("/lyrics/id", async (req, res) => {
                                         'User-Agent': 'insomnia/9.2.0',
                                         Origin: 'https://xpui.app.spotify.com',
                                         Referer: 'https://xpui.app.spotify.com/',
-                                        Authorization: `Bearer ${socalitoken ? socalitoken : '1'}`
+                                        Authorization: `Bearer ${socalitoken ? socalitoken : '1'}`,
+                                        'Cache-Control': 'no-cache, no-store, must-revalidate',
+                                        'Pragma': 'no-cache',
+                                        'Expires': '0'
                                     }
                             })
                                 .then(resp => resp.text())
