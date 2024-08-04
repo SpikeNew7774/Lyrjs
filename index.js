@@ -17,14 +17,32 @@ app.get("/lyrics/search", async (req, res) => {
 
     if (!userAccessToken) {
         ourToken = true
-        await generateToken.then(data => {
-            userAccessToken = "Bearer " + data.access_token
-            socalitoken = data.access_token
-        })
+        try {
+            await generateToken.then(data => {
+                userAccessToken = "Bearer " + data.access_token
+                socalitoken = data.access_token
+            })
+        } catch (err) {
+            res.status(500).send(JSON.stringify({
+                error: true,
+                details: "unknown",
+                status: 500,
+                desc: err
+            }, null, 2))
+        }
     } else {
-        await generateToken.then(data => {
-            socalitoken = data.access_token
-        })
+        try {
+            await generateToken.then(data => {
+                socalitoken = data.access_token
+            })
+        } catch (err) {
+            res.status(500).send(JSON.stringify({
+                error: true,
+                details: "unknown",
+                status: 500,
+                desc: err
+            }, null, 2))
+        }
     }
 
     if (!userAccessToken) return res.status(401).send(JSON.stringify({
