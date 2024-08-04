@@ -90,7 +90,7 @@ app.get("/lyrics/search", async (req, res) => {
             }, null, 2))
             return "none"
         } else if (resp.status == 200) {
-            return resp
+            return resp.json()
         } else if (resp.status == 400) {
             res.status(400).send(JSON.stringify({
                 error: true,
