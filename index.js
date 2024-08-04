@@ -103,7 +103,7 @@ app.get("/lyrics/search", async (req, res) => {
     .then(data => {
         try {
             //console.log(data)
-            if (data.tracks.total == 0) return res.status(404).send(JSON.stringify({
+            if (data.tracks?.total == 0) return res.status(404).send(JSON.stringify({
                 error: true,
                 details: "No Tracks Found",
                 status: 404
