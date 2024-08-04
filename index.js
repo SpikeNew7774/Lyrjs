@@ -100,9 +100,8 @@ app.get("/lyrics/search", async (req, res) => {
             return "none"
         }
     })
-    .then(async predata => {
+    .then(data => {
         try {
-            const data = await predata.json()
             //console.log(data)
             if (data.tracks.total == 0) return res.status(404).send(JSON.stringify({
                 error: true,
@@ -117,10 +116,7 @@ app.get("/lyrics/search", async (req, res) => {
                     'User-Agent': 'insomnia/9.2.0',
                     Origin: 'https://xpui.app.spotify.com',
                     Referer: 'https://xpui.app.spotify.com/',
-                    Authorization: `Bearer ${socalitoken ? socalitoken : '1'}`,
-                    'Cache-Control': 'no-cache, no-store, must-revalidate',
-                    'Pragma': 'no-cache',
-                    'Expires': '0'
+                    Authorization: `Bearer ${socalitoken ? socalitoken : '1'}`
                 }
             })
                 .then(resp => resp.json())
@@ -168,15 +164,12 @@ app.get("/lyrics/search", async (req, res) => {
             tracksList.forEach((item, index) => {
                 setTimeout(() => {
                     fetch(`https://beautiful-lyrics.socalifornian.live/lyrics/${item.id}`, {
-                            method: 'GET',
-                            headers: {
+                        method: 'GET',
+                        headers: {
                             'User-Agent': 'insomnia/9.2.0',
                             Origin: 'https://xpui.app.spotify.com',
                             Referer: 'https://xpui.app.spotify.com/',
-                            Authorization: `Bearer ${socalitoken ? socalitoken : '1'}`,
-                            'Cache-Control': 'no-cache, no-store, must-revalidate',
-                            'Pragma': 'no-cache',
-                            'Expires': '0'
+                            Authorization: `Bearer ${socalitoken ? socalitoken : '1'}`
                         }
                     })
                         .then(resp => resp.text())
@@ -227,7 +220,7 @@ app.get("/lyrics/search", async (req, res) => {
                                 }))
                                 console.log(err)
                             } catch (error) {
-                                //console.log(error)
+                                console.log(error)
                             }
                             console.log(err)
                         });
@@ -244,6 +237,13 @@ app.get("/lyrics/search", async (req, res) => {
         }
        console.log(error)     
     }
+    }).catch(err => {
+         if (!res.headersSent) {
+            res.status(500).send(JSON.stringify({
+                error: true,
+                status: 500
+            }, null, 2))
+        }
     })
 })
 
