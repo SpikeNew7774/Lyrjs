@@ -16,7 +16,26 @@ app.get("/lyrics/search", async (req, res) => {
     let ourToken = false
 
     if (!userAccessToken) {
-        ourToken = true
+        return res.status(401).send(JSON.stringify({
+                error: true,
+                details: "No Access Token Specified",
+                status: 401
+        }, null, 2))
+    }
+
+    try {
+        await generateToken.then(data => {
+            socalitoken = data.access_token
+        })
+    } catch (err) {
+        res.status(500).send(JSON.stringify({
+            error: true,
+            details: "unknown",
+            status: 500,
+            desc: err
+        }, null, 2))
+    }
+        /* ourToken = true
         try {
             await generateToken.then(data => {
                 userAccessToken = "Bearer " + data.access_token
@@ -43,13 +62,13 @@ app.get("/lyrics/search", async (req, res) => {
                 desc: err
             }, null, 2))
         }
-    }
+    } */
 
-    if (!userAccessToken) return res.status(401).send(JSON.stringify({
+    /* if (!userAccessToken) return res.status(401).send(JSON.stringify({
         error: true,
         details: "Unauthorized",
         status: 401
-    }, null, 2))
+    }, null, 2)) */
     
     if (!trackName || !artistName) return res.status(403).send(JSON.stringify({
         error: true,
@@ -259,6 +278,27 @@ app.get("/lyrics/id", async (req, res) => {
     }) */
 
     if (!userAccessToken) {
+        return res.status(401).send(JSON.stringify({
+                error: true,
+                details: "No Access Token Specified",
+                status: 401
+        }, null, 2))
+    }
+
+    try {
+        await generateToken.then(data => {
+            socalitoken = data.access_token
+        })
+    } catch (err) {
+        res.status(500).send(JSON.stringify({
+            error: true,
+            details: "unknown",
+            status: 500,
+            desc: err
+        }, null, 2))
+    }
+
+    /* if (!userAccessToken) {
         ourToken = true
         await generateToken.then(data => {
             userAccessToken = "Bearer " + data.access_token
@@ -268,7 +308,7 @@ app.get("/lyrics/id", async (req, res) => {
         await generateToken.then(data => {
             socalitoken = data.access_token
         })
-    } /* return res.status(401).send(JSON.stringify({
+    } *//* return res.status(401).send(JSON.stringify({
         error: true,
         details: "Unauthorized",
         status: 401
