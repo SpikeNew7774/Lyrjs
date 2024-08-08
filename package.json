@@ -3,6 +3,7 @@
   "version": "1.1.é",
   "description": "",
   "main": "index.js",
+  "src": "https://github.com/SpikeNew7774/Lyrjs.git",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SpikeNew7774/Lyrjs.git"
