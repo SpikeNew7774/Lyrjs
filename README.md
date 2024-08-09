@@ -13,3 +13,6 @@ https://uptime.spikerko.org
 [![Lyrjs Cert. Exp.](https://uptime.spikerko.org/api/badge/11/cert-exp?style=for-the-badge)](https://uptime.spikerko.org)\
 [![Lyrjs Current Response Time](https://uptime.spikerko.org/api/badge/11/response?style=for-the-badge)](https://uptime.spikerko.org)
 
+# Server
+Currently: Google Cloud Run
+
