@@ -3,9 +3,8 @@ Check out the [![GitHub Wiki Link](https://img.shields.io/badge/wiki-documentati
 
 # Status
 https://uptime.spikerko.org
-\
-\
-This may not be accurate, due to github caching these badges. Click on the link above for further info.\
+
+### This may not be accurate, due to github caching these badges. Click on the link above for further info.
 \
 [![Lyrjs Status](https://uptime.spikerko.org/api/badge/11/status?style=for-the-badge)](https://uptime.spikerko.org)\
 [![Lyrjs Uptime](https://uptime.spikerko.org/api/badge/11/uptime?style=for-the-badge)](https://uptime.spikerko.org)\
