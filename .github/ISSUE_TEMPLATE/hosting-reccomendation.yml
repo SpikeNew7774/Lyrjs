@@ -1,0 +1,34 @@
+name: "Hosting Reccomendation"
+description: "You want to reccomend us a hosting to host our application"
+title: "(Hosting Reccomendation Name)"
+labels: ["Hosting Reccomendation"]
+assignees: SpikeNew7774
+
+body:
+  - type: input
+    id: hosting-name
+    attributes:
+      label: "Hosting Provider Name"
+      description: "This is where youre supposed to type the hosting provider"
+      placeholder: "Enter the Hosting Provider Name here"
+    validations:
+      required: true
+  - type: textarea
+    id: hosting-desc
+    attributes:
+      label: "Hosting Description"
+      description: "Why should I choose this hosting, Pros and Cons"
+      placeholder: |
+        This hosting is in Europe so its closer to the main user base,...
+        Pros: ...
+        Cons: ...
+    validations:
+      required: true
+  - type: checkboxes
+    id: last-check
+    attributes:
+      label: "Check if you haven't suggested: (check description)"
+      description: "Vercel, Railway, Google Cloud Run. If yes cancel the issue (I have already used those). If not check this checkbox."
+      options:
+        - label: I checked!
+          required: true
