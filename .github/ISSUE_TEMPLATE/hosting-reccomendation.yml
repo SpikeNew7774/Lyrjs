@@ -19,8 +19,8 @@ body:
       label: "Hosting Description"
       description: "Why should I choose this hosting, Pros and Cons"
       placeholder: |
-        This hosting is in Europe so its closer to the main user base,...
-        Pros: ...
+        This hosting is in Europe so its closer to the main user base, ...\
+        Pros: ...\
         Cons: ...
     validations:
       required: true
