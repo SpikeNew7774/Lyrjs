@@ -17,5 +17,5 @@ https://uptime.spikerko.org
 [![Lyrjs Current Response Time](https://uptime.spikerko.org/api/badge/11/response?style=for-the-badge)](https://uptime.spikerko.org)
 
 # Server
-Currently: Google Cloud Run
+Currently: [Railway.app](https://railway.app)
 
