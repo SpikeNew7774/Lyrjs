@@ -1,5 +1,5 @@
 # NOTICE!
-If any of you know a good and relatively free NodeJS serverless hosting. Tell us at [hi@lyrjs.spikerko.org](mailto:hi@lyrjs.spikerko.org)
+If any of you know a good and relatively free NodeJS serverless hosting. Go to the issues tab and add a new issue -> Hosting Reccomendations
 
 # Lyrjs
 Check out the [![GitHub Wiki Link](https://img.shields.io/badge/wiki-documentation-forestgreen?style=for-the-badge)](https://github.com/SpikeNew7774/Lyrjs/wiki) for all the information
