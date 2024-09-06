@@ -1,4 +1,6 @@
 # NOTICE!
+This is the Node JS repository. Go check out the newer Cloudflare Workers Version Repository [SpikeNew7774/Lyrjs_CW](https://github.com/SpikeNew7774/Lyrjs_CW) on GitHub
+
 If any of you know a good and relatively free NodeJS serverless hosting. Go to the issues tab and add a new issue -> Hosting Reccomendations
 
 # Lyrjs
